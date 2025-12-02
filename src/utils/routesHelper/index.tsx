@@ -2,7 +2,7 @@
  * Author: Gavin.wang
  * Date: 2025-11-28 13:58:14
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-02 11:44:30
+ * LastEditTime: 2025-12-02 16:04:56
  * FilePath: /react-vite-cli/src/utils/routesHelper/index.tsx
  * Description:
  */
@@ -41,7 +41,7 @@ export const menuRender = (_routesConfig: any[], selectedKeys?: any): any => {
       if (displayInMenu && label) {
         return {
           key: path || nameEn,
-          icon: icon ? <Icon name={icon} color={iconColor} /> : null,
+          icon: icon ? typeof icon === 'string' ? <Icon name={icon} color={iconColor} /> : icon : null,
           children: subMenu ? menuRender(subMenu, selectedKeys) : undefined,
           label: (() => {
             if (!subMenu) {

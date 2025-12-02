@@ -1,13 +1,6 @@
-/*
- * Author  Luke.Lu
- * Date  2023-12-05 13:54:13
- * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-02 11:38:18
- * Description
- */
 import { lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { routesConfig } from '@/routes/configs';
+import { routesConfig, screenRoutesConfig } from '@/routes/configs';
 import type { routeItem } from '@/types/routes';
 
 import LoginPage from '@/pages/CommonPages/LoginPage';
@@ -15,17 +8,17 @@ import ErrorPage from '@/pages/CommonPages/ErrorPage';
 
 const AuthLayout = lazy(() => import('@/layouts/AuthLayout'));
 const BasicLayout = lazy(() => import('@/layouts/BasicLayout'));
+const ScreenLayout = lazy(() => import('@/layouts/ScreenLayout'));
 
-const processedArr: routeItem[] = [];
-const routesRender = (routesArr: routeItem[]) => {
-  routesArr.map((route) => {
+const routesRender = (routesArr: routeItem[], processedArr: routeItem[] = []): routeItem[] => {
+  for (const route of routesArr) {
     if (route.Component) {
       processedArr.push(route);
-    } else if (route.subMenu) {
-      routesRender(route.subMenu);
     }
-  });
-
+    if (route.subMenu) {
+      routesRender(route.subMenu, processedArr);
+    }
+  }
   return processedArr;
 };
 
@@ -46,13 +39,18 @@ const RouterGenerater = () => {
             element: <BasicLayout />,
             children: routesRender(routesConfig),
           },
+          {
+            path: '/screen',
+            element: <ScreenLayout />,
+            children: routesRender(screenRoutesConfig),
+          },
         ],
       },
     ]),
   );
 
   /*
-   * 走在线路由逻辑
+   * TODO:在线路由逻辑(根据实际情况完善)
    */
   // const matchLocalRouter = (path: string, routes = routesConfig): routeItem | null => {
   //   for (const item of routes) {

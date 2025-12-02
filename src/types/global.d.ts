@@ -2,7 +2,7 @@
  * Author  Luke.Lu
  * Date  2023-12-10 14:14:04
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-01 10:48:12
+ * LastEditTime: 2025-12-02 17:00:15
  * Description 为全局模块提供智能补全
  */
 import apiCollection from '@/services/index';
@@ -40,11 +40,9 @@ declare global {
 
   interface Window {
     ENV: {
-      debugEnvironment: string;
       routeMode: 'online' | 'local';
       buildTimeStamp: string;
       branchName: string;
-      ssoControlRoom: string;
     };
   }
 }

@@ -1,9 +1,10 @@
 /*
- * Author  Luke.Lu
- * Date  2023-09-25 14:56:25
- * LastEditors  Luke.Lu
- * LastEditTime  2023-12-15 11:43:52
- * Description
+ * Author: Gavin.wang
+ * Date: 2025-04-28 10:29:06
+ * LastEditors: Gavin.wang
+ * LastEditTime: 2025-12-02 14:50:09
+ * FilePath: /react-vite-cli/src/layouts/BroadcastProvider/index.tsx
+ * Description:
  */
 import { App } from 'antd';
 import type { MessageInstance } from 'antd/es/message/interface';

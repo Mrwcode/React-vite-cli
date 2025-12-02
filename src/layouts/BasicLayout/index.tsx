@@ -2,7 +2,7 @@
  * Author: Gavin.wang
  * Date: 2025-10-30 09:46:25
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-02 10:57:48
+ * LastEditTime: 2025-12-02 17:08:24
  * FilePath: /react-vite-cli/src/layouts/BasicLayout/index.tsx
  * Description:
  */
@@ -49,6 +49,7 @@ const BasicLayout = () => {
     if (historyRecorder.length > 9) historyRecorder.shift();
     historyRecorder.push(location);
     setHistoryRecorder(historyRecorder);
+    console.log('xxxxxxx=>>', import.meta.env.VITE_PROXY_TARGET);
   }, [location]);
 
   useEffect(() => {

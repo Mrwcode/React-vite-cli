@@ -1,9 +1,10 @@
 /*
- * Author  Luke.Lu
- * Date  2024-01-30 10:01:51
- * LastEditors  Luke.Lu
- * LastEditTime  2024-03-22 16:29:29
- * Description
+ * Author: Gavin.wang
+ * Date: 2025-04-28 10:29:06
+ * LastEditors: Gavin.wang
+ * LastEditTime: 2025-12-02 16:52:16
+ * FilePath: /react-vite-cli/src/pages/CommonPages/store.ts
+ * Description:
  */
 import { atom } from 'recoil';
 

@@ -2,7 +2,7 @@
  * Author: Gavin.wang
  * Date: 2025-07-30 11:04:47
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-01 11:22:34
+ * LastEditTime: 2025-12-02 16:52:49
  * FilePath: /react-vite-cli/src/pages/CommonPages/ErrorPage/index.tsx
  * Description:
  */
@@ -35,7 +35,7 @@ const ErrorPage = () => {
                   subTitle='对不起，您访问的页面不存在'
                   extra={
                     <Button type='primary' onClick={() => navigate('/')}>
-                      回到我的对话
+                      返回
                     </Button>
                   }
                 />
@@ -51,7 +51,7 @@ const ErrorPage = () => {
                   subTitle='抱歉，页面出现异常，请刷新页面重试或联系管理员'
                   extra={
                     <Button type='primary' onClick={() => navigate('/')}>
-                      回到我的对话
+                      返回
                     </Button>
                   }
                 />
