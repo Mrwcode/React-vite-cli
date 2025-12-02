@@ -1,0 +1,67 @@
+// 通用颜色
+@primary-color: #4543e9;
+@stateGrid-green: #006569;
+@areaBackground-color: #eff4f5;
+@mainReadingText-color: rgba(0, 0, 0, 0.85);
+@border-color: #eee;
+@controlMainText-color: #88c5ff;
+
+// 主界面
+@mainHeaderHeight: 72px; //顶部菜单高度
+@commonPadding: 16px;
+@commonMargin: 16px;
+@commonWrapperBorderRadius: 6px;
+@drawerMenu-width: 200px;
+@drawerMenu-background: #f4f7fe;
+
+.areaTitleBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px #eee solid;
+}
+
+// 数据中台区域h3标题
+.areaH3Title {
+  height: 32px;
+  line-height: 32px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+//定制化滚动条样式
+.customizedScrollBar {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: rgb(246, 248, 254);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #4543e9;
+  }
+}
+
+// 中台显示内容区域
+.contentWrapper {
+  height: calc(~'100% - 30px');
+  overflow-y: auto;
+  overflow-x: hidden;
+  .customizedScrollBar();
+}
+
+// v4.8.7 查询重置按钮和标题的位置
+.searchBtnArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+
+  h1 {
+    margin: 0;
+  }
+}

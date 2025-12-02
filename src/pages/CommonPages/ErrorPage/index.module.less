@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #f4f7fe;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: @mainHeaderHeight;
+  line-height: @mainHeaderHeight;
+  color: #fff;
+  // background: #006d75;
+  background: @primary-color;
+
+  .mainTitleBox {
+    height: @mainHeaderHeight;
+    line-height: @mainHeaderHeight;
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+      margin: 0 8px 0 0;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+  background: #f4f7fe;
+
+  .errorMessage {
+    font-size: 46px;
+    padding: 0 0 8px 0;
+    text-align: center;
+    color: #979797;
+  }
+}

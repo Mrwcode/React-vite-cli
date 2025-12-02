@@ -1,0 +1,114 @@
+.singleDataArea {
+  margin: 0 0 24px 0;
+}
+
+.dataTitleBox {
+  width: 401px;
+  height: 29px;
+  padding: 0 8px;
+  background: url(../images/chart-title-bg.png);
+
+  h3 {
+    line-height: 34px;
+    .blueGlowFont(18px);
+  }
+}
+
+.basicBtn {
+  color: #fff;
+  width: 110px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+  background: url(../images/button-bg.png) no-repeat;
+
+  &:hover,
+  &.active {
+    background: url(../images/button-active-bg.png) no-repeat;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.35);
+  }
+
+  &.disable {
+    cursor: not-allowed;
+    filter: grayscale(1);
+  }
+}
+
+.tableBox {
+  padding: @commonPadding 14px;
+
+  .tableHeader {
+    display: flex;
+    border: 2px rgba(61, 197, 255, 0.35) solid;
+    padding: 2px 0;
+    border-left: none;
+    border-right: none;
+    margin: 0 0 2px 0;
+
+    .th {
+      background: rgba(61, 197, 255, 0.35);
+      padding: 2px 4px;
+      color: #fff;
+      margin: 0 2px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+
+    .td {
+      margin: 0 2px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      .td {
+        background: rgba(143, 197, 255, 0.2);
+      }
+    }
+
+    &:nth-child(even) {
+      .td {
+        background: rgba(30, 45, 57, 0.3);
+      }
+    }
+  }
+
+  .emptyBox {
+    padding: 16px 0;
+    color: @controlMainText-color;
+  }
+}
+
+.returnBtnBox {
+  position: absolute;
+  right: 16px;
+  top: 120px;
+  z-index: 10;
+
+  .returnBtn {
+    .blueGlowFont(18px);
+    width: 116px;
+    height: 43px;
+    line-height: 43px;
+    padding: 0 0 0 32px;
+    text-align: center;
+    cursor: pointer;
+    background: url(@/controlRooms/assets/images/returnButton-bg.png);
+
+    &:hover {
+      background: url(@/controlRooms/assets/images/returnButton-active-bg.png);
+    }
+  }
+}

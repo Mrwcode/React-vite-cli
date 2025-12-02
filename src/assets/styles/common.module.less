@@ -1,0 +1,38 @@
+// 不同于variable.less, 本文件中一般整体输出某组件的样式
+.tableBox {
+  background: #fff;
+  border-bottom: 1px #eee solid;
+
+  .tableTitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px @commonPadding;
+    border-bottom: 1px #eee solid;
+    h3 {
+      .areaH3Title();
+    }
+    .btnBox {
+      button {
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+}
+
+// 底部通栏按钮操作容器
+.bottomBtnBox {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 8px @commonPadding;
+  border-top: 1px @border-color solid;
+  background: #fff;
+
+  button {
+    margin: 0 0 0 8px;
+  }
+}

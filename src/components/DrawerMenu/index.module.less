@@ -1,0 +1,76 @@
+.basicLayoutSider {
+  z-index: 10;
+  position: relative;
+  :global {
+    .ant-layout-sider-trigger {
+      border-inline-end: 1px solid rgba(5, 5, 5, 0.06);
+    }
+  }
+
+  .mainNavMenu {
+    padding: 0 8px;
+    overflow-y: auto;
+    font-weight: 500;
+    height: calc(100vh - @mainHeaderHeight - 48px);
+    .customizedScrollBar();
+  }
+}
+
+.collapsedIcon {
+  font-size: 18px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.collapsedBtn {
+  position: absolute;
+  right: -11px;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+
+  .up,
+  .down {
+    width: 6px;
+    height: 16px;
+    background: #ccc;
+    transition: all 0.3s ease;
+  }
+
+  .up {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .down {
+    border-radius: 0 0 4px 4px;
+  }
+
+  &:hover {
+    .up,
+    .down {
+      background: #959595;
+    }
+  }
+
+  &.collapsed {
+    .up {
+      transform: rotate(-15deg) translateY(2px);
+    }
+
+    .down {
+      transform: rotate(15deg) translateY(-2px);
+    }
+  }
+
+  &.uncollapsed:hover {
+    .up {
+      transform: rotate(15deg) translateY(2px);
+    }
+
+    .down {
+      transform: rotate(-15deg) translateY(-2px);
+    }
+  }
+}
