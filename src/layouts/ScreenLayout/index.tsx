@@ -2,7 +2,7 @@
  * Author: Gavin.wang
  * Date: 2025-12-02 15:03:41
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-02 15:10:52
+ * LastEditTime: 2025-12-05 11:01:39
  * FilePath: /react-vite-cli/src/layouts/ScreenLayout/index.tsx
  * Description:
  */
@@ -44,7 +44,7 @@ const ScreenLayout = () => {
           <Content className={styles.content}>
             {outlet || (
               <div className={styles.welcomeContent}>
-                <p>欢迎使用运维决策平台</p>
+                <p>欢迎使用系统平台</p>
               </div>
             )}
           </Content>
