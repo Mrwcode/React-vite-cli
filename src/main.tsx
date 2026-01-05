@@ -2,7 +2,7 @@
  * Author: Gavin.wang
  * Date: 2025-11-26 16:04:30
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-01 15:37:59
+ * LastEditTime: 2026-01-05 17:16:57
  * FilePath: /react-vite-cli/src/main.tsx
  * Description:
  */
@@ -15,7 +15,7 @@ import RouterGenerator from './routes';
 import antdConfig from '../configs/antd.config';
 import BroadcastProvider from './layouts/BroadcastProvider';
 import LoadingPage from './pages/CommonPages/LoadingPage';
-
+import './i18n';
 import 'dayjs/locale/zh-cn';
 
 const ProjectApp = () => {

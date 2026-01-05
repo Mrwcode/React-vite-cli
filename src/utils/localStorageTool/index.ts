@@ -2,24 +2,38 @@
  * Author: Gavin.wang
  * Date: 2025-04-28 10:29:06
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-01 10:43:52
+ * LastEditTime: 2026-01-05 17:03:19
  * FilePath: /react-vite-cli/src/utils/localStorageTool/index.ts
  * Description:
  */
+const isBrowser = typeof window !== 'undefined';
+
 export const localStorageTool = {
-  setItem(key: string, value: any) {
-    localStorage.setItem(key, JSON.stringify(value));
-  },
-  getItem(key: string) {
-    const originString = localStorage.getItem(key);
+  getItem<T>(key: string, defaultValue?: T): T | undefined {
+    if (!isBrowser) return defaultValue;
+    const value = localStorage.getItem(key);
+    if (value === null) return defaultValue;
+
     try {
-      if (originString) return JSON.parse(originString);
-    } catch (error) {
-      return originString;
+      return JSON.parse(value);
+    } catch {
+      return value as T;
     }
   },
-  clearItem(key: string) {
+
+  setItem(key: string, value: any) {
+    if (!isBrowser) return;
+    localStorage.setItem(key, JSON.stringify(value));
+  },
+
+  removeItem(key: string) {
+    if (!isBrowser) return;
     localStorage.removeItem(key);
+  },
+
+  clear() {
+    if (!isBrowser) return;
+    localStorage.clear();
   },
 };
 

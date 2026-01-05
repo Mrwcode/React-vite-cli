@@ -2,10 +2,12 @@
  * Author: Gavin.wang
  * Date: 2025-03-17 10:22:04
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-01 15:42:12
+ * LastEditTime: 2026-01-05 17:01:50
  * FilePath: /react-vite-cli/configs/antd.config.ts
  * Description:
  */
+import enUS from 'antd/locale/en_US';
+import zhCN from 'antd/locale/zh_CN';
 
 const antdConfig = {
   theme: {
@@ -40,6 +42,7 @@ const antdConfig = {
       },
     },
   },
+  locale: localStorageTool.getItem('language') === 'en' ? enUS : zhCN,
 };
 
 export default antdConfig;

@@ -100,7 +100,7 @@ const DrawerMenu = () => {
         } else {
           setSelectedKeys(['/' + newPathnameArr[0]]);
         }
-        localStorageTool.clearItem('queryFormCache');
+        localStorageTool.removeItem('queryFormCache');
       }
     } else {
       // 此情况仅显示基础title，不拼接模块名称

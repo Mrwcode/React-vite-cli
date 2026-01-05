@@ -2,7 +2,7 @@
  * Author: Gavin.wang
  * Date: 2025-12-01 15:44:21
  * LastEditors: Gavin.wang
- * LastEditTime: 2025-12-02 10:25:00
+ * LastEditTime: 2026-01-05 17:07:36
  * FilePath: /react-vite-cli/src/components/Header/index.tsx
  * Description:
  */
@@ -18,6 +18,28 @@ const items: MenuProps['items'] = [
   {
     key: '2',
     label: '退出系统',
+  },
+  {
+    key: '3',
+    label: '切换语言',
+    children: [
+      {
+        key: '3-1',
+        label: '中文',
+        onClick: () => {
+          localStorageTool.setItem('language', 'zh');
+          window.location.reload();
+        },
+      },
+      {
+        key: '3-2',
+        label: 'English',
+        onClick: () => {
+          localStorageTool.setItem('language', 'en');
+          window.location.reload();
+        },
+      },
+    ],
   },
 ];
 

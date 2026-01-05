@@ -26,7 +26,7 @@ const LoginPage = () => {
           .then((res) => {
             if (res) navigate('/');
             else {
-              localStorageTool.clearItem('authorizedToken');
+              localStorageTool.removeItem('authorizedToken');
             }
           })
           .catch((error) => {
